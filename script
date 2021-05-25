@@ -1,0 +1,52 @@
+define(['pipAPI', 'https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/ep/qualtrics/quep5.js'], function(APIConstructor, epExtension){
+	var API = new APIConstructor();
+	var global = API.getGlobal();
+	return epExtension(
+	{
+			//The prime categories.
+			primeCats :  [
+				{
+					name : 'Celebrity', //Will appear in the data.
+					//An array of all media objects for this category.
+					mediaArray : [
+    				    {image : 'CelebF1.bmp'}, 
+    					{image : 'CelebF2.bmp'}, 
+    					{image : 'CelebF3.bmp'}, 
+    					{image : 'CelebF4.bmp'}, 
+    					{image : 'CelebF5.bmp'}, 
+    					{image : 'CelebM1.bmp'}, 
+    					{image : 'CelebM2.bmp'}, 
+    					{image : 'CelebM3.bmp'}, 
+    					{image : 'CelebM4.bmp'}, 
+    					{image : 'CelebM5.bmp'}
+				    ]
+				}, 
+				{
+					name : 'Regular', //Will appear in the data.
+					//An array of all media objects for this category.
+					mediaArray : [
+    					{image : 'WhFC1.bmp'}, 
+    					{image : 'WhFC2.bmp'}, 
+    					{image : 'WhFC3.bmp'}, 
+    					{image : 'WhFC4.bmp'}, 
+    					{image : 'WhFC5.bmp'}, 
+    					{image : 'WhMC1.bmp'}, 
+    					{image : 'WhMC2.bmp'}, 
+    					{image : 'WhMC3.bmp'}, 
+    					{image : 'WhMC4.bmp'}, 
+    					{image : 'WhMC5.bmp'}
+    				]
+				}
+			],	
+
+			nTrialsPerPrimeTargetPair:15, //How many trials in a block, per prime-target combination (always three blocks).
+			fixationDuration : 500, 
+			errorFBDuration : 1500, 
+			ITIDuration : 500,
+
+			//Set the image folder here.
+			base_url : {
+				image : "https://satchmo496.github.io/images/"
+			}
+	});
+});
